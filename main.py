@@ -49,7 +49,7 @@ async def create_login(client: Client, message: Message):
 @bot.on_message(video | document | photo | audio & (private))
 async def dl_up(client: Client, message: Message):
     
-    if not os.path.exists("./token.txt", encoding="utf-8"):
+    if not os.path.exists("./token.txt"):
         await message.reply("no hay token, ponga uno")
         return
 
